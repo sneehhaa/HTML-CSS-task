@@ -36,18 +36,33 @@
                 margin-bottom: 7px;
                 font-size: 14px;
             }
+            .input-container {
+                position: relative;
+                margin-bottom: 15px;
+            }
             /* email and password boxes */
             .login-container input {
                 width: 100%;
-                padding: 10px;
+                padding: 10px 15px;
                 margin-bottom: 15px;
                 border: 1px solid #e6f0f5;
                 border-radius: 4px;
+                text-align: left;
             }
             /* placeholder text */
             .login-container input::placeholder {
                 color: #bdc5c9;
                 font-style: arial;
+                text-align: left;
+            }
+            /* icon for email and password */
+            .input-container .icon {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
             }
             /* forgot password text */
             .login-container .forgot-password {
@@ -81,10 +96,18 @@
         <div class = "login-container">
             <h1>Login</h1>
             <form id = "Login">
+                <div class= "input-container">
                 <label for ="email">Email Address</label>
+                <div class= "icon"><img src = "mail.png">
+            </div>
                 <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+                <div class= "input-container">
                 <label for ="password">Password</label>
+                <div class= "icon"><img src = "padlock.png">
+            </div>
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
                 <div class="forgot-password">Forgot your password?</div>
                 <button type="submit">Login</button>
             </form>
